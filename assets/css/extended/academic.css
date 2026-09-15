@@ -21,7 +21,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .logo a { font-size: 20px; font-weight: 600; }
 .main { padding-top: 48px; }
 .home-header { margin-bottom: 32px; }
-.home-header h1 { font-size: 42px; letter-spacing: -1px; line-height: 1.2; }
+.home-header h1 { font-size: 34px; letter-spacing: -1px; line-height: 1.2; }
 .home-role { color: var(--secondary); font-size: 18px; margin-top: 12px; }
 .post-content { line-height: 1.9; }
 .post-content h2 { font-size: 23px; margin-top: 32px; margin-bottom: 14px; }
@@ -55,7 +55,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .header-nav { column-gap: 16px; }
   .menu { column-gap: 16px; }
   .menu a { font-size: 14px; }
-  .home-header h1 { font-size: 36px; }
+  .home-header h1 { font-size: 30px; }
   .post-title, .page-header h1 { font-size: 28px; }
   .recent-posts li { flex-direction: column; gap: 4px; padding: 12px 0; }
 }
