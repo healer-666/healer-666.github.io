@@ -30,7 +30,7 @@ buildFuture = false
   ShowCodeCopyButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
-  ShowRssButtonInSectionTermList = true
+  ShowRssButtonInSectionTermList = false
   ShowShareButtons = false
   DateFormat = '2006-01-02'
 
