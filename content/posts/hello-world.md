@@ -44,4 +44,4 @@ print(note)
 
 > 先把问题和过程写清楚，再慢慢完善。
 
-欢迎通过 [GitHub](https://github.com/healer-666) 与我交流。更多个人信息见 [About]({{< relref "/about" >}})。
+欢迎通过 [GitHub](https://github.com/healer-666) 与我交流。更多个人信息见 [首页]({{< relref "/" >}})。

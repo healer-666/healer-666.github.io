@@ -34,7 +34,7 @@ def main():
     origin = "https://healer-666.github.io"
     errors = []
     pages = {p: Page(p.read_text(encoding="utf-8")) for p in root.rglob("*.html")}
-    required = ["index.html", "about/index.html", "posts/index.html", "links/index.html",
+    required = ["index.html", "posts/index.html",
                 "tags/index.html", "categories/index.html", "404.html",
                 "posts/index.xml", "sitemap.xml", "robots.txt"]
     for name in required:

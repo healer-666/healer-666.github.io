@@ -1,4 +1,4 @@
-# weijiafu 的个人主页
+# 魏家福 的个人主页
 
 网站：<https://healer-666.github.io/>
 
@@ -55,7 +55,7 @@ categories = ['论文阅读笔记']
 +++
 ```
 
-下面直接写 Markdown 正文。新文章默认 `draft = true`，准备公开时改成 `false`；日期不要晚于实际发布时间。Blog 默认按日期倒序排列，每页 10 篇，首页显示最新 3 篇。
+下面直接写 Markdown 正文。新文章默认 `draft = true`，准备公开时改成 `false`；日期不要晚于实际发布时间。博客默认按日期倒序排列，每页 10 篇，首页显示最新 3 篇。
 
 ```sh
 git add content/
@@ -69,22 +69,22 @@ git push origin main
 
 | 内容 | 文件 |
 | --- | --- |
-| 首页姓名、身份、介绍、教育背景、研究兴趣、联系方式 | `content/_index.md` |
-| About 页面 | `content/about.md` |
-| Links 页面 | `content/links.md` |
+| 首页姓名、个人简介、联系方式 | `content/_index.md` |
+| 关于我（隐藏草稿） | `content/about.md` |
+| 链接（隐藏草稿） | `content/links.md` |
 | 站点名、作者、简介和导航 | `hugo.toml` |
 | 测试文章 | `content/posts/hello-world.md` |
 
-姓名与邮箱使用站点所有者确认的公开资料；身份和研究兴趣沿用建站方案中的示例，教育背景留待补充。修改姓名或邮箱时同步更新上表对应页面。
+当前导航仅保留首页和博客，主体内容使用中文。个人简介使用站点所有者提供的原文，关于我和链接页保留为草稿，不在正式网站发布。修改姓名或邮箱时同步更新上表对应页面。
 
 ## 目录与扩展
 
 ```text
 content/
   _index.md             # 首页
-  about.md
-  links.md
-  posts/                # Blog 与文章
+  about.md              # 隐藏草稿
+  links.md              # 隐藏草稿
+  posts/                # 博客与文章
   research/_index.md    # 预留草稿
   projects/_index.md    # 预留草稿
   publications/_index.md

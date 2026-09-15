@@ -1,5 +1,5 @@
 +++
-title = 'Blog'
+title = '博客'
 description = '保研经验、论文阅读、科研总结与开发实践。'
 
 [cascade]

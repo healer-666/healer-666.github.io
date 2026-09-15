@@ -1,6 +1,6 @@
 # Page content lives in content/, including the home page.
 baseURL = 'https://healer-666.github.io/'
-title = 'weijiafu'
+title = '魏家福'
 theme = 'PaperMod'
 languageCode = 'zh-CN'
 defaultContentLanguage = 'zh'
@@ -18,8 +18,8 @@ buildFuture = false
   category = 'categories'
 
 [params]
-  author = 'weijiafu'
-  description = 'weijiafu 的个人学术与技术主页：学习笔记、科研总结与开发实践。'
+  author = '魏家福'
+  description = '魏家福 的个人学术与技术主页：学习笔记、科研总结与开发实践。'
   mainSections = ['posts']
   defaultTheme = 'light'
   disableThemeToggle = true
@@ -54,24 +54,14 @@ buildFuture = false
 
 [[menus.main]]
   identifier = 'home'
-  name = 'Home'
+  name = '首页'
   pageRef = '/'
   weight = 10
 [[menus.main]]
-  identifier = 'about'
-  name = 'About'
-  pageRef = '/about'
-  weight = 20
-[[menus.main]]
   identifier = 'blog'
-  name = 'Blog'
+  name = '博客'
   pageRef = '/posts'
   weight = 30
-[[menus.main]]
-  identifier = 'links'
-  name = 'Links'
-  pageRef = '/links'
-  weight = 40
 
 # Publish a draft section before adding its future navigation entry:
 # pageRef = '/research', '/projects', '/publications' or '/cv'.

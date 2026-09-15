@@ -1,29 +1,12 @@
 +++
-title = 'About'
-description = '关于我，以及这个网站。'
+title = '关于我'
+description = '个人简介与联系方式。'
+draft = true
 +++
 
-## 关于我
-
-我是 weijiafu，一名计算机专业学生，关注大语言模型、AI Agents 与可靠 AI 系统。
-
-我希望在这里持续记录学习、科研和技术实践，把阅读中的问题、实验中的观察和开发中的经验整理下来。
-
-## 教育背景
-
-学校、专业与就读时间待补充。
-
-## 这个网站
-
-- **保研经验**：准备过程、资料整理与阶段复盘。
-- **科研项目总结**：问题定义、实验过程与结果分析。
-- **论文阅读笔记**：研究动机、方法理解与开放问题。
-- **技术学习记录**：概念梳理、代码实现与工具使用。
-- **开发实践记录**：从需求到实现，以及过程中的取舍。
-
-未来会逐步补充研究项目、论文和个人简历。
+我来自中国海洋大学计算机相关专业，即将前往南京大学攻读硕士学位
 
 ## 联系方式
 
 - GitHub：[healer-666](https://github.com/healer-666)
-- Email：[jiafuwei.cn@gmail.com](mailto:jiafuwei.cn@gmail.com)
+- 邮箱：[jiafuwei.cn@gmail.com](mailto:jiafuwei.cn@gmail.com)
