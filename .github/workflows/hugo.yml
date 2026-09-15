@@ -1,0 +1,72 @@
+name: Build and deploy Hugo site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+    steps:
+      - name: Check out source and pinned theme
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Install pinned Hugo release
+        run: |
+          HUGO_VERSION="$(tr -d '\r\n' < .hugo-version)"
+          archive="hugo_${HUGO_VERSION}_linux-amd64.tar.gz"
+          release="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
+          mkdir -p "${RUNNER_TEMP}/hugo"
+          cd "${RUNNER_TEMP}/hugo"
+          curl --fail --location --retry 3 -o "$archive" "${release}/${archive}"
+          curl --fail --location --retry 3 -o checksums.txt "${release}/hugo_${HUGO_VERSION}_checksums.txt"
+          grep -E "[ *]${archive}$" checksums.txt | sha256sum --check --strict -
+          tar -xzf "$archive" hugo
+          echo "${RUNNER_TEMP}/hugo" >> "$GITHUB_PATH"
+
+      - name: Build production site
+        run: hugo --gc --minify --panicOnWarning
+
+      - name: Validate generated pages and internal links
+        run: python3 scripts/check_site.py
+
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: public
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

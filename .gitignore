@@ -1,0 +1,8 @@
+/public/
+/resources/
+/.hugo_build.lock
+/hugo_stats.json
+/output/
+/.playwright-cli/
+.DS_Store
+Thumbs.db

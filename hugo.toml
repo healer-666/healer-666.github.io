@@ -1,0 +1,77 @@
+# Page content lives in content/, including the home page.
+baseURL = 'https://healer-666.github.io/'
+title = 'weijiafu'
+theme = 'PaperMod'
+languageCode = 'zh-CN'
+defaultContentLanguage = 'zh'
+hasCJKLanguage = true
+timeZone = 'Asia/Shanghai'
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+[params]
+  author = 'weijiafu'
+  description = 'weijiafu 的个人学术与技术主页：学习笔记、科研总结与开发实践。'
+  mainSections = ['posts']
+  defaultTheme = 'light'
+  disableThemeToggle = true
+  disableSpecial1stPost = true
+  disableScrollToTop = true
+  hideMeta = true
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowRssButtonInSectionTermList = true
+  ShowShareButtons = false
+  DateFormat = '2006-01-02'
+
+  [params.assets]
+    favicon = '/favicon.svg'
+    favicon16x16 = '/favicon-16x16.png'
+    favicon32x32 = '/favicon-32x32.png'
+    apple_touch_icon = '/apple-touch-icon.png'
+    safari_pinned_tab = '/favicon.svg'
+    theme_color = '#ffffff'
+    disableHLJS = true
+
+[markup.highlight]
+  noClasses = false
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[caches.images]
+  dir = ':cacheDir/images'
+
+[[menus.main]]
+  identifier = 'home'
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+[[menus.main]]
+  identifier = 'about'
+  name = 'About'
+  pageRef = '/about'
+  weight = 20
+[[menus.main]]
+  identifier = 'blog'
+  name = 'Blog'
+  pageRef = '/posts'
+  weight = 30
+[[menus.main]]
+  identifier = 'links'
+  name = 'Links'
+  pageRef = '/links'
+  weight = 40
+
+# Publish a draft section before adding its future navigation entry:
+# pageRef = '/research', '/projects', '/publications' or '/cv'.

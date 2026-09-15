@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article class="home-profile">
+  <header class="home-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.role }}<p class="home-role">{{ . }}</p>{{ end }}
+  </header>
+  <div class="post-content md-content">{{ .Content }}</div>
+</article>
+{{ $posts := (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+{{ with $posts }}
+<section class="recent-posts" aria-labelledby="recent-heading">
+  <div class="section-heading">
+    <h2 id="recent-heading">Recent Writing</h2>
+    <a href="{{ "posts/" | relURL }}">全部文章 →</a>
+  </div>
+  <ul>
+    {{ range first 3 . }}
+    <li>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}

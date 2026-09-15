@@ -1,0 +1,64 @@
+/* Overrides only; keep themes/PaperMod unchanged. */
+:root {
+  --main-width: 760px;
+  --nav-width: 760px;
+  --primary: #20252b;
+  --content: #30363d;
+  --secondary: #626a73;
+  --border: #e6e9ed;
+  --radius: 3px;
+}
+body, .list { background: #fff; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+}
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid #315f87;
+  outline-offset: 4px;
+}
+.header { border-bottom: 1px solid var(--border); }
+.logo a { font-size: 20px; font-weight: 600; }
+.main { padding-top: 48px; }
+.home-header { margin-bottom: 32px; }
+.home-header h1 { font-size: 42px; letter-spacing: -1px; line-height: 1.2; }
+.home-role { color: var(--secondary); font-size: 18px; margin-top: 12px; }
+.post-content { line-height: 1.9; }
+.post-content h2 { font-size: 23px; margin-top: 32px; margin-bottom: 14px; }
+.post-content a, .recent-posts a { color: #315f87; }
+.post-content ul { padding-inline-start: 24px; }
+.post-content li { margin-top: 3px; }
+.post-title, .page-header h1 { font-size: 34px; line-height: 1.35; }
+.recent-posts { border-top: 1px solid var(--border); margin-top: 36px; padding-top: 24px; }
+.section-heading { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between; }
+.section-heading h2 { font-size: 23px; }
+.section-heading > a { font-size: 14px; }
+.recent-posts ul { list-style: none; margin: 20px 0 16px; }
+.recent-posts li { display: flex; gap: 24px; padding: 8px 0; align-items: baseline; }
+.recent-posts time { color: var(--secondary); font-size: 14px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.recent-posts a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.post-entry {
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: 24px 0;
+  margin-bottom: 0;
+  background: transparent;
+}
+.post-entry:active { transform: none; }
+.entry-header h2 { font-size: 23px; }
+.entry-content { font-size: 15px; line-height: 1.8; }
+.entry-footer { margin-top: 14px; }
+.footer { margin-top: 32px; font-size: 12px; }
+@media (max-width: 600px) {
+  .main { padding-top: 32px; }
+  .header-nav { column-gap: 16px; }
+  .menu { column-gap: 16px; }
+  .menu a { font-size: 14px; }
+  .home-header h1 { font-size: 36px; }
+  .post-title, .page-header h1 { font-size: 28px; }
+  .recent-posts li { flex-direction: column; gap: 4px; padding: 12px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
