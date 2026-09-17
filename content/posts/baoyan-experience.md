@@ -2,9 +2,8 @@
 title = '经验贴：末九5%上岸南大计院'
 date = 2026-09-17T12:00:00+08:00
 draft = false
-description = '末九前5%上岸南京大学计算机学院的保研经历与经验总结。'
+description = '末九前5%上岸南京大学计算机学院的保研经历与经验总结'
 summary = '记录从前期准备、夏令营与预推免，到最终上岸南京大学计算机学院的完整保研经历。'
-tags = ['保研经验', '南京大学', '计算机']
 categories = ['经验分享']
 showToc = true
 tocOpen = true
