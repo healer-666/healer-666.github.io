@@ -73,7 +73,7 @@ git push origin main
 | 关于我（隐藏草稿） | `content/about.md` |
 | 链接（隐藏草稿） | `content/links.md` |
 | 站点名、作者、简介和导航 | `hugo.toml` |
-| 测试文章 | `content/posts/hello-world.md` |
+| 第一篇博客 | `content/posts/baoyan-experience.md` |
 
 当前导航仅保留首页和博客，主体内容使用中文。个人简介使用站点所有者提供的原文，关于我和链接页保留为草稿，不在正式网站发布。修改姓名或邮箱时同步更新上表对应页面。
 

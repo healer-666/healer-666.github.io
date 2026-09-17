@@ -3,6 +3,7 @@
 /.hugo_build.lock
 /hugo_stats.json
 /output/
+/.local-drafts/
 /.playwright-cli/
 .DS_Store
 Thumbs.db

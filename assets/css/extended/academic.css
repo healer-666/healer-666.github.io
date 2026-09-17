@@ -50,6 +50,40 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .entry-content { font-size: 15px; line-height: 1.8; }
 .entry-footer { margin-top: 14px; }
 .footer { margin-top: 32px; font-size: 12px; }
+.post-content img {
+  display: block;
+  max-height: 760px;
+  margin: 28px auto;
+  object-fit: contain;
+}
+.folded-applications {
+  margin: 28px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fafbfc;
+}
+.folded-applications > summary {
+  padding: 12px 16px;
+  font-weight: 600;
+}
+.folded-applications__content {
+  padding: 0 16px 12px;
+}
+@media (min-width: 1200px) {
+  .post-single > details.toc {
+    position: fixed;
+    top: 88px;
+    left: calc(50% + 410px);
+    width: min(260px, calc(50vw - 430px));
+    max-height: calc(100vh - 120px);
+    margin: 0;
+    overflow: auto;
+    background: #fff;
+  }
+  .post-single > details.toc .inner {
+    margin: 0 18px;
+  }
+}
 @media (max-width: 600px) {
   .main { padding-top: 32px; }
   .header-nav { column-gap: 16px; }
