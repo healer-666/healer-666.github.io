@@ -7,7 +7,7 @@ description = '个人链接与站内索引。'
 ## 找到我
 
 - [GitHub · healer-666](https://github.com/healer-666)
-- [邮箱 · jiafuwei.cn@gmail.com](mailto:jiafuwei.cn@gmail.com)
+- [邮箱 · 3485888491@qq.com](mailto:3485888491@qq.com)
 
 ## 阅读与订阅
 

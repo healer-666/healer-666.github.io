@@ -147,7 +147,7 @@ tocOpen = true
 
     在这里必须支持一波天津大学tanklab导师团，线下考核往返路费和住宿费全部给报销，豪气十足！也是我整个保研历程中寥寥无几给报销路费和住宿费的课题组，并且到了线下之后也是诚意满满，不仅详细介绍了课题组，每个人发了一袋子文创，而且面试也非常温和，基本等于走流程，只要和课题组的老师完成双选就可以获得offer。面试完后，导师团的徐老师愿意主动给我他的专项名额，在当时给了我很大的认可，并且老师理解我还想去试试其他学校的想法，很大程度上抚平了我的焦虑，也让我后来有底气大胆的尝试更多学校。
 
-![54fe1cda-78b0-40c5-ba48-114b1a0e42b2](/images/baoyan-experience/01-tianjin-offer.png)
+![与老师交流的聊天截图，姓名已做隐私处理](/images/baoyan-experience/01-tianjin-offer-redacted.png)
 
 ![01f50f82bf2ce3c6b228b9e4bbda64cb](/images/baoyan-experience/02-tianjin-trip.jpg)
 

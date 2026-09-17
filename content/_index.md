@@ -8,4 +8,4 @@ description = '我本科来自中国海洋大学计算机相关专业，即将�
 
 ## 联系方式
 
-[GitHub](https://github.com/healer-666) · [邮箱](mailto:jiafuwei.cn@gmail.com)
+[GitHub](https://github.com/healer-666) · [邮箱](mailto:3485888491@qq.com)
