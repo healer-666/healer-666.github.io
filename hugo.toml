@@ -1,6 +1,6 @@
 # Page content lives in content/, including the home page.
 baseURL = 'https://healer-666.github.io/'
-title = '魏家福'
+title = 'W'
 theme = 'PaperMod'
 languageCode = 'zh-CN'
 defaultContentLanguage = 'zh'
@@ -18,8 +18,8 @@ buildFuture = false
   category = 'categories'
 
 [params]
-  author = '魏家福'
-  description = '魏家福 的个人学术与技术主页：学习笔记、科研总结与开发实践。'
+  author = 'W'
+  description = 'W 的个人学术与技术主页：学习笔记、科研总结与开发实践。'
   mainSections = ['posts']
   defaultTheme = 'light'
   disableThemeToggle = true
