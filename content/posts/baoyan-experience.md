@@ -9,6 +9,8 @@ showToc = true
 tocOpen = true
 +++
 
+![南京大学研究生待录取通知，姓名与复试总成绩已做隐私处理](/images/baoyan-experience/00-nju-admission-redacted.png)
+
 ---
 
 ## 一些我建议了解的保研黑话：
