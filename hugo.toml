@@ -43,11 +43,26 @@ buildFuture = false
     theme_color = '#ffffff'
     disableHLJS = true
 
+  # Contact links shown on the home page (layouts/home.html).
+  [params.contact]
+    github = 'https://github.com/healer-666'
+    email = '3485888491@qq.com'
+
 [markup.highlight]
   noClasses = false
 
 [markup.goldmark.renderer]
   unsafe = false
+
+# Stand-alone images render as <figure> via layouts/_markup/render-image.html.
+[markup.goldmark.parser]
+  wrapStandAloneImageWithinParagraph = false
+
+# The post sidebar/mobile table of contents lists h2 and h3.
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
+  ordered = false
 
 [caches.images]
   dir = ':cacheDir/images'

@@ -1,26 +1,34 @@
 {{ define "main" }}
-<article class="home-profile">
-  <header class="home-header">
-    <h1>{{ .Params.headline | default .Title }}</h1>
-    {{ with .Params.role }}<p class="home-role">{{ . }}</p>{{ end }}
-  </header>
-  <div class="post-content md-content">{{ .Content }}</div>
-</article>
-{{ $posts := (where site.RegularPages "Section" "posts").ByDate.Reverse }}
-{{ with $posts }}
-<section class="recent-posts" aria-labelledby="recent-heading">
+<section class="home-intro" aria-labelledby="home-title">
+  <h1 id="home-title" class="visually-hidden">{{ .Params.headline | default .Title }}</h1>
+  <div class="home-intro__text">{{ .Content }}</div>
+  {{- with site.Params.contact }}
+  <ul class="home-links" aria-label="联系方式">
+    {{- with .github }}
+    <li><a href="{{ . }}" rel="me noopener">GitHub</a></li>
+    {{- end }}
+    {{- with .email }}
+    <li><a href="mailto:{{ . }}" title="{{ . }}">邮箱</a></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</section>
+
+{{- $posts := (where site.RegularPages "Section" "in" site.Params.mainSections).ByDate.Reverse }}
+{{- $limit := 5 }}
+{{- with $posts }}
+<section class="home-recent" aria-labelledby="recent-heading">
   <div class="section-heading">
     <h2 id="recent-heading">最新文章</h2>
+    {{- if gt (len $posts) $limit }}
     <a href="{{ "posts/" | relURL }}">全部文章 →</a>
+    {{- end }}
   </div>
-  <ul>
-    {{ range first 3 . }}
-    <li>
-      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
+  <ul class="post-list">
+    {{- range first $limit . }}
+    {{ partial "post-list-item.html" (dict "page" . "heading" "h3") }}
+    {{- end }}
   </ul>
 </section>
-{{ end }}
+{{- end }}
 {{ end }}

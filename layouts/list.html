@@ -1,0 +1,33 @@
+{{- define "main" }}
+{{- /* Section and term pages: a plain vertical list of posts, newest first. */}}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+</header>
+
+{{- with .Content }}
+<div class="post-content md-content">{{ . }}</div>
+{{- end }}
+
+{{- $paginator := .Paginate .RegularPages.ByDate.Reverse }}
+{{- with $paginator.Pages }}
+<ul class="post-list">
+  {{- range . }}
+  {{ partial "post-list-item.html" (dict "page" . "heading" "h2") }}
+  {{- end }}
+</ul>
+{{- else }}
+<p class="post-list__empty">暂无文章。</p>
+{{- end }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<nav class="pagination" aria-label="分页">
+  {{- if $paginator.HasPrev }}
+  <a class="prev" href="{{ $paginator.Prev.URL }}" rel="prev">← {{ i18n "prev_page" }}</a>
+  {{- end }}
+  <span class="pagination__status">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+  {{- if $paginator.HasNext }}
+  <a class="next" href="{{ $paginator.Next.URL }}" rel="next">{{ i18n "next_page" }} →</a>
+  {{- end }}
+</nav>
+{{- end }}
+{{- end }}

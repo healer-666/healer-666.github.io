@@ -1,0 +1,19 @@
+{{- /* One entry of a vertical post list; context: page. Heading level via .Scratch-free dict. */ -}}
+{{- $page := .page -}}
+{{- $tag := .heading | default "h2" -}}
+<li class="post-item">
+  {{ printf "<%s class=\"post-item__title\">" $tag | safeHTML -}}
+    <a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a>
+    {{- if $page.Draft }} <span class="post-item__draft">草稿</span>{{ end -}}
+  {{- printf "</%s>" $tag | safeHTML }}
+  {{- if not $page.Date.IsZero }}
+  <p class="post-item__meta">
+    <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date | time.Format (site.Params.DateFormat | default "2006-01-02") }}</time>
+  </p>
+  {{- end }}
+  {{- if ne ($page.Param "hideSummary") true }}
+  {{- with $page.Summary | plainify | htmlUnescape | strings.TrimSpace }}
+  <p class="post-item__summary">{{ . }}{{ if $page.Truncated }}…{{ end }}</p>
+  {{- end }}
+  {{- end }}
+</li>

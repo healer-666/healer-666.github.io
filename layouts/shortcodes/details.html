@@ -1,6 +1,6 @@
-<details class="folded-applications">
-  <summary>{{ .Get "summary" }}</summary>
-  <div class="folded-applications__content">
+<details class="fold">
+  <summary class="fold__summary">{{ .Get "summary" }}</summary>
+  <div class="fold__content">
     {{ .Page.RenderString (dict "display" "block") .Inner }}
   </div>
 </details>

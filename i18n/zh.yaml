@@ -1,0 +1,3 @@
+# Project-level overrides of PaperMod strings (theme files stay untouched).
+- id: home
+  translation: "首页"

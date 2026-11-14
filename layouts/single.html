@@ -1,0 +1,58 @@
+{{- define "main" }}
+{{- $toc := "" }}
+{{- if .Param "ShowToc" }}
+  {{- if findRE `<li>` .TableOfContents 1 }}{{ $toc = .TableOfContents }}{{ end }}
+{{- end }}
+
+<article class="post-single{{ with $toc }} has-toc{{ end }}">
+  <header class="post-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1 class="post-title">
+      {{- .Title }}
+      {{- if .Draft }} <span class="post-title__draft">草稿</span>{{ end -}}
+    </h1>
+    {{- if not (.Param "hideMeta") }}
+    <p class="post-meta">
+      {{- if not .Date.IsZero }}
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format (site.Params.DateFormat | default "2006-01-02") }}</time>
+      {{- end }}
+      {{- if .Param "ShowReadingTime" }}
+      <span>{{ i18n "read_time" .ReadingTime | default (printf "%d 分钟" .ReadingTime) }}</span>
+      {{- end }}
+      {{- with partial "author.html" . }}
+      <span>{{ . }}</span>
+      {{- end }}
+    </p>
+    {{- end }}
+  </header>
+
+  {{- with $toc }}
+  {{- /* Open by default so the TOC works without JavaScript; post.js collapses it on narrow screens. */}}
+  <details class="post-toc" open>
+    <summary class="post-toc__title">{{ i18n "toc" | default "目录" }}</summary>
+    {{ . }}
+  </details>
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content md-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  {{- if .Param "ShowPostNavLinks" }}
+  {{- with partial "post_nav_links.html" . }}
+  <footer class="post-footer">{{ . }}</footer>
+  {{- end }}
+  {{- end }}
+</article>
+
+<dialog class="lightbox" aria-label="图片预览">
+  <form method="dialog" class="lightbox__bar">
+    <button class="lightbox__close" type="submit">关闭</button>
+  </form>
+  <img class="lightbox__img" alt="">
+</dialog>
+{{- end }}
