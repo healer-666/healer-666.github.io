@@ -1,0 +1,10 @@
+{{- /* Mark external http(s) links with class="external-link" and safe rel attributes. */ -}}
+{{- $dest := .Destination -}}
+{{- $u := urls.Parse $dest -}}
+{{- $siteHost := (urls.Parse site.BaseURL).Host -}}
+{{- $isExternal := and $u.IsAbs (in (slice "http" "https") $u.Scheme) (ne $u.Host $siteHost) -}}
+<a href="{{ $dest | safeURL }}"
+  {{- with .Title }} title="{{ . }}"{{ end -}}
+  {{- if $isExternal }} class="external-link" target="_blank" rel="noopener noreferrer"{{ end -}}
+>{{ .Text | safeHTML }}</a>
+{{- /**/ -}}

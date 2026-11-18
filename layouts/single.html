@@ -42,11 +42,15 @@
   </div>
   {{- end }}
 
-  {{- if .Param "ShowPostNavLinks" }}
-  {{- with partial "post_nav_links.html" . }}
-  <footer class="post-footer">{{ . }}</footer>
-  {{- end }}
-  {{- end }}
+  <footer class="post-footer">
+    <div class="post-footer__bar">
+      <a class="post-footer__back" href="{{ "posts/" | relURL }}">← 全部文章</a>
+      <a class="post-footer__top" href="#top">↑ 返回顶部</a>
+    </div>
+    {{- if .Param "ShowPostNavLinks" }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+  </footer>
 </article>
 
 <dialog class="lightbox" aria-label="图片预览">

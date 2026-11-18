@@ -24,7 +24,8 @@
   --secondary: #5d6670;
   --tertiary: #d5dae0;
   --border: #e4e7eb;
-  --code-bg: #f5f7f9;
+  --code-bg: #f6f8fa;
+  --code-block-bg: #f6f8fa;
   --accent: #2c5d8a;
   --accent-soft: rgba(44, 93, 138, 0.35);
 
@@ -152,6 +153,16 @@ summary:focus-visible,
 .section-heading > a:hover,
 .pagination a:hover {
   text-decoration-color: currentColor;
+}
+
+.md-content a.external-link::after {
+  content: "↗";
+  display: inline-block;
+  margin-inline-start: 0.18em;
+  font-size: 0.78em;
+  line-height: 1;
+  text-decoration: none;
+  opacity: 0.7;
 }
 
 /* 3. Home --------------------------------------------------------------- */
@@ -516,7 +527,29 @@ summary:focus-visible,
   margin-top: 40px;
 }
 
+.post-footer__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.post-footer__bar a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.post-footer__bar a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+}
+
 .paginav {
+  margin-top: 16px;
   border: 0;
   border-top: 1px solid var(--border);
   border-radius: 0;
@@ -645,8 +678,116 @@ summary:focus-visible,
   padding: 0.12em 0.35em;
   border-radius: 3px;
   background: var(--code-bg);
+  color: #24292f;
   font-size: 0.86em;
   overflow-wrap: anywhere;
+}
+
+/* Light-theme code blocks & Chroma syntax colors (replaces PaperMod's dark block). */
+.md-content .highlight:not(table),
+.md-content pre {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--code-block-bg) !important;
+}
+
+.md-content pre code,
+.highlight pre.chroma code {
+  padding: 14px 16px;
+  background: transparent !important;
+  color: #24292f;
+  font-size: 14px;
+  line-height: 1.65;
+  word-break: normal;
+}
+
+.highlight pre.chroma .line .cl {
+  padding: 0;
+}
+
+.bg,
+.chroma {
+  color: #24292f;
+  background-color: var(--code-block-bg) !important;
+}
+
+.chroma .hl { background-color: #fff8c5; }
+.chroma .lnt,
+.chroma .ln { color: #6e7781; }
+.chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs,
+.chroma .cp,
+.chroma .cpf { color: #57606a; font-style: italic; }
+.chroma .k,
+.chroma .kc,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .kt,
+.chroma .ow { color: #cf222e; }
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .dl,
+.chroma .sd,
+.chroma .s2,
+.chroma .se,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .sr,
+.chroma .s1,
+.chroma .ss { color: #0a3069; }
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo,
+.chroma .nb,
+.chroma .bp,
+.chroma .no,
+.chroma .nl,
+.chroma .o { color: #0550ae; }
+.chroma .nf,
+.chroma .fm,
+.chroma .nd,
+.chroma .na,
+.chroma .nx { color: #6639ba; }
+.chroma .nc,
+.chroma .nn,
+.chroma .ne,
+.chroma .ni,
+.chroma .py,
+.chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi,
+.chroma .vm { color: #953800; }
+.chroma .nt { color: #116329; }
+.chroma .gd { color: #82071e; background-color: #ffebe9; }
+.chroma .gi { color: #116329; background-color: #dafbe1; }
+
+.copy-code {
+  top: 8px;
+  right: 8px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #fff;
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+.copy-code:hover {
+  border-color: var(--tertiary);
+  color: var(--primary);
 }
 
 /* 7. Figures, tables, folds, lightbox ----------------------------------- */

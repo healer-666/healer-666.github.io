@@ -1,4 +1,5 @@
-{{- /* Images keep their own aspect ratio; block images become a figure linking to the full-size file (lightbox in post.js). */ -}}
+{{- /* Images keep their own aspect ratio; block images become a figure linking to the full-size file (lightbox in post.js).
+       Caption comes from the optional Markdown title ("...") or from non-hash alt text. */ -}}
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}
 {{- $width := 0 -}}
@@ -17,15 +18,18 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
+{{- $altText := .Text | strings.TrimSpace -}}
+{{- $isHashAlt := gt (len (findRE `^[0-9a-fA-F]{16,}$` $altText 1)) 0 -}}
+{{- $caption := .Title | default (cond (not $isHashAlt) $altText "") -}}
 {{- $img := printf `<img src="%s" alt="%s"%s loading="lazy" decoding="async"%s>`
   $src
-  (.Text | transform.HTMLEscape)
+  ($altText | transform.HTMLEscape)
   (cond (gt $width 0) (printf ` width="%d" height="%d"` $width $height) "")
   (cond (ne .Title "") (printf ` title="%s"` (.Title | transform.HTMLEscape)) "") -}}
 {{- if .IsBlock -}}
 <figure class="post-figure">
   <a class="post-figure__link" href="{{ $src }}" data-lightbox>{{ $img | safeHTML }}</a>
-  {{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+  {{- with $caption }}<figcaption>{{ . }}</figcaption>{{ end }}
 </figure>
 {{- else -}}
 {{ $img | safeHTML }}
