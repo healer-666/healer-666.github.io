@@ -826,10 +826,13 @@ summary:focus-visible,
   border: 1px solid var(--border);
 }
 
+.md-content figure > figcaption,
 .post-figure figcaption {
-  margin-top: 8px;
+  margin: 6px 0 0;
   color: var(--secondary);
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .table-wrap {

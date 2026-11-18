@@ -8,7 +8,7 @@ showToc = true
 tocOpen = true
 +++
 
-![南京大学研究生待录取通知，姓名与复试总成绩已做隐私处理](/images/baoyan-experience/00-nju-admission-redacted.png)
+![南京大学研究生待录取通知](/images/baoyan-experience/00-nju-admission-redacted.png)
 
 ---
 
@@ -148,7 +148,7 @@ tocOpen = true
 
     在这里必须支持一波天津大学tanklab导师团，线下考核往返路费和住宿费全部给报销，豪气十足！也是我整个保研历程中寥寥无几给报销路费和住宿费的课题组，并且到了线下之后也是诚意满满，不仅详细介绍了课题组，每个人发了一袋子文创，而且面试也非常温和，基本等于走流程，只要和课题组的老师完成双选就可以获得offer。面试完后，导师团的徐老师愿意主动给我他的专项名额，在当时给了我很大的认可，并且老师理解我还想去试试其他学校的想法，很大程度上抚平了我的焦虑，也让我后来有底气大胆的尝试更多学校。
 
-![与老师交流的聊天截图，姓名已做隐私处理](/images/baoyan-experience/01-tianjin-offer-redacted.png)
+![与老师交流的聊天截图](/images/baoyan-experience/01-tianjin-offer-redacted.png)
 
 ![01f50f82bf2ce3c6b228b9e4bbda64cb](/images/baoyan-experience/02-tianjin-trip.jpg)
 
@@ -180,7 +180,7 @@ tocOpen = true
 
     我在网吧从下午打到了晚上，到了晚上快下机的时候，我发现绿裙开始有躁动了，在命运的眷顾下，没过一会南大cs给我发来了线上测试通过的邮件，当时也是高兴的直接从椅子上跳了起来，现在回想起来还是能感到当时的雀跃，人生能有几次这样如此开心的时刻呢，也就这样我再次启程去了南京。
 
-![南京大学计算机学院预推免线下活动入围通知，收件人用户名已做隐私处理](/images/baoyan-experience/05-nanjing-notice-redacted.png)
+![南京大学计算机学院预推免线下活动入围通知](/images/baoyan-experience/05-nanjing-notice-redacted.png)
 
     南大cs是我整个保研历程中唯一一个线下考核有伴的，因为我的好兄弟保研搭子lql也是如愿通过了线上测试，于是乎我俩就结伴开始了南大cs的线下之旅。9.4号上午报道的时候也成功和洪学长见面了，说实话看见报道名单上其他同学的学校时，心里还是有点发怵的，大部分竞争者都是中九及以上，但是洪学长也安慰了我们，“不要看他们的学校都很nb，其实进了线下考核，大家都差不多”，想了想也是这样，故也没什么紧张感了，报道完之后在校园里面逛了逛，因为第二天上午有机考，我俩下午也没有参加学院组织的导师学生见面会，直接回酒店复习去了。
 
